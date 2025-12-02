@@ -1,12 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9V55BJQS0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T9V55BJQS0'); 
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Teresa Tourism</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -31,44 +40,56 @@
         <!-- Surfing Section -->
         <section id="surfing">
             <h2>Surfing</h2>
-            <img src="images/massive_waves.jpg" alt="Surfing waves" width="300" height="200">
-            <p>Santa Teresa is one of the top surfing destinations in the world! There is great surf year-round. Also great spots for beginners and pros alike.</p>
-            <ul>
-                <li>Great waves all year</li>
-                <li>Good for beginners</li>
-                <li>Good for pros too</li>
-            </ul>
+            <div class="content-wrapper">
+                <img src="images/massive_waves.jpg" alt="Surfing waves" width="300" height="200">
+                <div class="text-content">
+                    <p>Santa Teresa is one of the top surfing destinations in the world! There is great surf year-round. Also great spots for beginners and pros alike.</p>
+                    <ul>
+                        <li>Great waves all year</li>
+                        <li>Good for beginners</li>
+                        <li>Good for pros too</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Jungle Section -->
         <section id="jungle">
             <h2>Jungle Tours</h2>
-            <img src="images/jungle-river.jpg" alt="Jungle and trees" width="300" height="200">
-            <p>Not only are there great waves, there is also a breathtaking jungle! Tours, ziplines.</p>
-            <ul>
-                <li>Nature walks</li>
-                <li>Ziplines</li>
-                <li>See animals</li>
-            </ul>
+            <div class="content-wrapper">
+                <img src="images/jungle-river.jpg" alt="Jungle and trees" width="300" height="200">
+                <div class="text-content">
+                    <p>Not only are there great waves, there is also a breathtaking jungle! Tours, ziplines.</p>
+                    <ul>
+                        <li>Nature walks</li>
+                        <li>Ziplines</li>
+                        <li>See animals</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Casino Section -->
         <section id="casino">
             <h2>Casino Tropical</h2>
-            <img src="images/dealer.jpg" alt="Casino games" width="300" height="200">
-            <p>Santa Teresa is home to an amazing tropical casino. All types of games and entertainment are held here.</p>
-            <ul>
-                <li>Card games</li>
-                <li>Slot machines</li>
-                <li>Live shows</li>
-                <li>Tropical drinks</li>
-            </ul>
+            <div class="content-wrapper">
+                <img src="images/dealer.jpg" alt="Casino games" width="300" height="200">
+                <div class="text-content">
+                    <p>Santa Teresa is home to an amazing tropical casino. All types of games and entertainment are held here.</p>
+                    <ul>
+                        <li>Card games</li>
+                        <li>Slot machines</li>
+                        <li>Live shows</li>
+                        <li>Tropical drinks</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Info Section -->
         <section>
             <h2>Important Information</h2>
-            <table border="1">
+            <table>
                 <tr>
                     <td><strong>Legal</strong></td>
                     <td><strong>Help</strong></td>
@@ -91,7 +112,5 @@
         <p>Address: Santa Teresa, Costa Rica</p>
         <p>Copyright 2025 Santa Teresa Tourism</p>
     </footer>
-
-
 </body>
 </html>
