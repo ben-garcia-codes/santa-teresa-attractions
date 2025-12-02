@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9V55BJQS0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+  // This check prevents Google Analytics from running on your local development environment
+  var isLocal = window.location.hostname === 'localhost' || 
+                window.location.hostname === '127.0.0.1';
 
-  gtag('config', 'G-T9V55BJQS0'); 
+  if (!isLocal) {
+    // START GOOGLE ANALYTICS CODE (Only runs on live site)
+    // Asynchronously loads the Google Tag Manager script
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-T9V55BJQS0"; 
+    document.head.appendChild(script);
+
+    // Initializes the data layer and configures GA4
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T9V55BJQS0'); 
+    
+    // END GOOGLE ANALYTICS CODE
+  } else {
+    console.log("GA Tracking Skipped: Running on Local Host");
+  }
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
