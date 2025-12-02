@@ -1,0 +1,467 @@
+/* CSS */
+
+/* Reset and basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY WITH GRID LAYOUT */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, lightblue, #add8e6);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* HEADER ENHANCED */
+header {
+    background: linear-gradient(135deg, blue, #1e3d6f);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+
+/*  NAVIGATION WITH FLEXBOX  */
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
+}
+
+/*  MAIN CONTENT  */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*  SECTIONS ENHANCED  */
+section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, white, #f8f9ff);
+    border: 3px solid #2c5aa0;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    border-color: #1e3d6f;
+}
+
+/* First section (#home) special hero styling */
+section#home {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    border-color: white;
+}
+
+section#home h2 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+section#home p {
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* HEADINGS ENHANCED  */
+h2 {
+    color: blue;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, blue, darkblue);
+    border-radius: 2px;
+}
+
+/*  PARAGRAPHS  */
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+/*  LISTS ENHANCED  */
+ul {
+    font-size: 16px;
+    list-style: none;
+    background: linear-gradient(135deg, #e8f4ff, #f0f8ff);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid blue;
+    margin: 20px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+li {
+    margin-bottom: 12px;
+    padding: 10px 0;
+    padding-left: 35px;
+    position: relative;
+    color: #333;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+li:hover {
+    padding-left: 40px;
+    color: blue;
+    background-color: rgba(44, 90, 160, 0.1);
+    transform: translateX(5px);
+}
+
+/*  IMAGES WITH FLOATING AND ENHANCED STYLING  */
+img {
+    border: 3px solid black;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    display: block;
+    margin: 10px auto;
+}
+
+img:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    border-color: #2c5aa0;
+}
+
+/* Floating images - alternating left/right with text wrap */
+section#surfing img {
+    float: left;
+    margin: 0 25px 20px 0;
+    shape-outside: margin-box;
+}
+
+section#jungle img {
+    float: right;
+    margin: 0 0 20px 25px;
+    shape-outside: margin-box;
+}
+
+section#casino img {
+    float: left;
+    margin: 0 25px 20px 0;
+    shape-outside: margin-box;
+}
+
+/* Keep home and info section images centered */
+section#home img,
+section:last-child img {
+    float: none;
+    margin: 20px auto;
+}
+
+/* TABLE ENHANCED  */
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: none !important;
+}
+
+td {
+    padding: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none !important;
+}
+
+tr:first-child td {
+    background: linear-gradient(135deg, blue, darkblue);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+tr:not(:first-child) td {
+    background-color: white;
+    border-bottom: 2px solid #f0f8ff;
+    color: #333;
+}
+
+tr:not(:first-child):hover td {
+    background: linear-gradient(135deg, #f0f8ff, #e8f4ff);
+    transform: scale(1.02);
+    color: blue;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/*  FOOTER ENHANCED  */
+footer {
+    background: linear-gradient(135deg, darkblue, #001133);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 -6px 15px rgba(0,0,0,0.3);
+}
+
+footer h3 {
+    margin-top: 0;
+    color: lightblue;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+footer p {
+    margin: 10px 0;
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer p:last-child {
+    border-top: 2px solid #333;
+    padding-top: 20px;
+    margin-top: 25px;
+    color: #aaa;
+    font-style: italic;
+}
+
+/*  CLEARFIX FOR FLOATING IMAGES  */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*  MEDIA QUERIES FOR RESPONSIVE DESIGN  */
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    nav a {
+        font-size: 16px;
+        padding: 10px 20px;
+        min-width: 140px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    section {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    section#home h2 {
+        font-size: 2.8rem;
+    }
+    
+    /* Remove floating on tablets - stack everything */
+    img {
+        float: none !important;
+        display: block !important;
+        margin: 20px auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        width: auto !important;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    td {
+        padding: 12px 8px;
+    }
+    
+    ul {
+        padding: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px 10px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav {
+        gap: 10px;
+    }
+    
+    nav a {
+        font-size: 14px;
+        padding: 8px 16px;
+        min-width: 120px;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    section {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+    }
+    
+    h2 {
+        font-size: 1.9rem;
+    }
+    
+    section#home h2 {
+        font-size: 2.3rem;
+    }
+    
+    section#home p {
+        font-size: 1.1rem;
+    }
+    
+    p {
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    li {
+        font-size: 15px;
+        padding-left: 30px;
+    }
+    
+    li:hover {
+        padding-left: 33px;
+    }
+    
+    ul {
+        padding: 15px;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    td {
+        padding: 10px 5px;
+    }
+    
+    footer {
+        padding: 25px 15px;
+    }
+    
+    footer h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large Desktop Enhancement */
+@media screen and (min-width: 1200px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    section#home h2 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 2.8rem;
+    }
+    
+    section {
+        padding: 40px;
+    }
+    
+    img {
+        max-width: 350px;
+    }
+    
+    p {
+        font-size: 17px;
+    }
+    
+    li {
+        font-size: 17px;
+    }
+}
